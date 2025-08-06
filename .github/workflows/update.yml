@@ -30,6 +30,7 @@ jobs:
         run: |
           git config --global user.name "GitHub Actions Bot"
           git config --global user.email "action@github.com"
+          git rm --cached tonnel.png
           git add -f tonnel.png
           git diff --cached --quiet || {
             git commit -m "Update tonnel.png - $(date '+%F %T')"
