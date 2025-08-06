@@ -1,4 +1,4 @@
-name: Update Image
+name: Update tonnel.png
 
 on:
   schedule:
