@@ -2,6 +2,7 @@ import { writeFile } from 'fs/promises';
 
 (async()=>{
   try {
+    // my own api url that generates the chart as png
     const res = await fetch(process.env.API);
     if (!res.ok) {
       throw new Error(`${res.status} ${res.statusText}`);
