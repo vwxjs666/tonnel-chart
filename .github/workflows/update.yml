@@ -31,6 +31,8 @@ jobs:
           git config --global user.name "GitHub Actions Bot"
           git config --global user.email "action@github.com"
           git add tonnel.png
-          git commit -m "Update tonnel.png - $(date '+%Y-%m-%d %H:%M:%S')"
-          git pull --rebase
-          git push
+          git diff --cached --quiet || {
+            git commit -m "Update tonnel.png - $(date '+%F %T')"
+            git pull --rebase
+            git push
+          }
