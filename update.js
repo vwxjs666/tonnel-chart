@@ -1,0 +1,14 @@
+import { writeFile } from 'fs/promises';
+
+(async()=>{
+  try {
+    const res = await fetch(process.env.API);
+    if (!res.ok) {
+      throw new Error(`${res.status} ${res.statusText}`);
+    }
+    await writeFile("./tonnel.png",Buffer.from(await res.arrayBuffer()));
+    console.log("✅");
+  } catch (e) {
+    console.error("❌ ",e.stack);
+  }
+})();
