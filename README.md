@@ -1,3 +1,3 @@
-This repository provides a public Tonnel Chart image updated each 15 minutes using Github Action.
+This repository provides a public Tonnel Chart image updated each 15 minutes using Github Actions.
 
-![Chart](tonnel.png)
+![tonnel.png](tonnel.png)
