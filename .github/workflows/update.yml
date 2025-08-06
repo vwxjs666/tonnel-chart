@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  update_thumbs:
+  update:
     runs-on: ubuntu-latest
     strategy:
       matrix:
