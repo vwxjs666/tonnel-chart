@@ -2,7 +2,7 @@ name: Update tonnel.png
 
 on:
   schedule:
-    - cron: '*/30 * * * *'
+    - cron: '13,43 * * * *'
   workflow_dispatch:
 
 jobs:
