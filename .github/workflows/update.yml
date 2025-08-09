@@ -1,4 +1,4 @@
-name: Update tonnel.png
+name: Update
 
 on:
   #schedule:
@@ -32,7 +32,7 @@ jobs:
           git config --global user.email "action@github.com"
           git add -f tonnel.png
           git diff --cached --quiet || {
-            git commit -m "Update tonnel.png - $(date '+%F %T')"
+            git commit -m "Update - $(date '+%F %T')"
             git pull --rebase
             git push
           }
