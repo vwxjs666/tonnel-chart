@@ -25,6 +25,8 @@ jobs:
         run: node update.js
         env:
           API: ${{ secrets.API }}
+          API0: ${{ secrets.API0 }}
+          KEY: ${{ secrets.KEY }}
 
       - name: Commit Changes
         run: |
