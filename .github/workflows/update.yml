@@ -1,0 +1,40 @@
+name: Update
+
+on:
+  #schedule:
+    #- cron: '8,23,38,53 * * * *'
+    #- cron: '*/10 * * * *'
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [22.x]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Run JS
+        run: node update.js
+        env:
+          API: ${{ secrets.API }}
+          API0: ${{ secrets.API0 }}
+          KEY: ${{ secrets.KEY }}
+
+      - name: Commit Changes
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "action@github.com"
+          git add -f tonnel.png
+          git diff --cached --quiet || {
+            git commit -m "Update - $(date '+%F %T')"
+            git pull --rebase
+            git push
+          }
