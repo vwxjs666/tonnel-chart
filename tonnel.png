@@ -1,8 +1,5 @@
-SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON
-    at parse (<anonymous>)
-    at packageData (ext:deno_fetch/22_body.js:421:14)
-    at consumeBody (ext:deno_fetch/22_body.js:274:12)
+TypeError: (intermediate value).find is not a function
+    at default (file:///app/src/api/tonnel.js:160:98)
     at eventLoopTick (ext:core/01_core.js:179:7)
-    at async default (file:///app/src/api/tonnel.js:161:17)
     at async file:///app/src/index.js:48:82
     at async mapped (ext:deno_http/00_serve.ts:360:18)
