@@ -1,8 +1,6 @@
-SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON
-    at parse (<anonymous>)
-    at packageData (ext:deno_fetch/22_body.js:421:14)
-    at consumeBody (ext:deno_fetch/22_body.js:274:12)
-    at eventLoopTick (ext:core/01_core.js:179:7)
+TypeError: unexpected end of file
+    at async readableStreamCollectIntoUint8Array (ext:deno_web/06_streams.js:1108:19)
+    at async consumeBody (ext:deno_fetch/22_body.js:268:9)
     at async default (file:///app/src/api/tonnel.js:160:30)
     at async file:///app/src/index.js:50:82
     at async mapped (ext:deno_http/00_serve.ts:360:18)
