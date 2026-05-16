@@ -1,7 +1,4 @@
-SyntaxError: Unexpected end of JSON input
-    at parse (<anonymous>)
-    at packageData (ext:deno_fetch/22_body.js:421:14)
-    at consumeBody (ext:deno_fetch/22_body.js:274:12)
-    at async default (file:///app/src/api/tonnel.js:130:23)
+TypeError: Cannot read properties of undefined (reading 'priceChange24h')
+    at default (file:///app/src/api/tonnel.js:182:49)
     at async file:///app/src/index.js:50:102
     at async mapped (ext:deno_http/00_serve.ts:386:18)
