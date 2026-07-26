@@ -1,0 +1,4 @@
+TypeError: Cannot read properties of undefined (reading '0')
+    at default (file:///app/src/api/tonnel.js:159:180)
+    at async file:///app/src/index.js:50:102
+    at async mapped (ext:deno_http/00_serve.ts:479:22)
